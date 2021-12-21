@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="412.0" prefWidth="710.0" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="id.ac.upj.tif.pbouas.PboUasController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <Pane prefHeight="417.0" prefWidth="439.0">
+         <children>
+            <Label layoutY="-6.0" text="Aplikasi Data Spesifikasi Smartphone">
+               <font>
+                  <Font name="Antenna-Bold" size="17.0" />
+               </font>
+            </Label>
+            <TableView fx:id="table" layoutY="32.0" onMouseClicked="#handleClick" prefHeight="336.0" prefWidth="482.0">
+              <columns>
+                <TableColumn fx:id="col_merek" prefWidth="95.0" text="Merek" />
+                <TableColumn fx:id="col_processor" prefWidth="99.0" text="Processor" />
+                  <TableColumn fx:id="col_ram" prefWidth="64.0" text="RAM" />
+                  <TableColumn fx:id="col_storage" prefWidth="74.0" text="Storage" />
+                  <TableColumn fx:id="col_harga" prefWidth="149.0" text="Harga" />
+              </columns>
+            </TableView>
+            <Button layoutX="493.0" layoutY="343.0" mnemonicParsing="false" onAction="#onClickButtonSimpan" text="Tambah" />
+            <Button layoutX="564.0" layoutY="343.0" mnemonicParsing="false" onAction="#onClickButtonUbah" text="Ubah" />
+            <Label fx:id="idlabel" layoutX="671.0" layoutY="6.0" textFill="#00000034" />
+            <Button layoutX="620.0" layoutY="343.0" mnemonicParsing="false" onAction="#onClickButtonHapus" text="Hapus" />
+            <TextField fx:id="merek_text" layoutX="562.0" layoutY="39.0" prefHeight="25.0" prefWidth="108.0" />
+            <Label layoutX="493.0" layoutY="42.0" text="Merek">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="processor_text" layoutX="562.0" layoutY="75.0" prefHeight="25.0" prefWidth="108.0" />
+            <Label layoutX="494.0" layoutY="78.0" text="Processor">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ram_text" layoutX="562.0" layoutY="111.0" prefHeight="25.0" prefWidth="108.0" />
+            <Label layoutX="493.0" layoutY="114.0" text="RAM">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="storage_text" layoutX="562.0" layoutY="149.0" prefHeight="25.0" prefWidth="108.0" />
+            <Label layoutX="493.0" layoutY="152.0" text="Storage">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="harga_text" layoutX="562.0" layoutY="188.0" prefHeight="25.0" prefWidth="108.0" />
+            <Label layoutX="493.0" layoutY="191.0" text="Harga">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelNotif" layoutX="493.0" layoutY="220.0" prefHeight="19.0" prefWidth="140.0" style="-fx-border-radius: 5; -fx-background-color: #7CDF7C;" textAlignment="CENTER" />
+            <TextArea fx:id="isiData" layoutX="493.0" layoutY="246.0" prefHeight="92.0" prefWidth="177.0" />
+            <Button fx:id="reset" layoutX="640.0" layoutY="217.0" mnemonicParsing="false" onAction="#onClickButtonReset" prefHeight="25.0" prefWidth="28.0">
+               <graphic>
+                  <ImageView fitHeight="14.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../java/id/ac/upj/tif/pbouas/images/reset.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="421.0" layoutY="3.0" mnemonicParsing="false" onAction="#exitApplication" prefHeight="25.0" prefWidth="59.0" text="Keluar" />
+            <Label fx:id="waktu" layoutX="493.0" layoutY="7.0" />
+            <Button layoutX="353.0" layoutY="3.0" mnemonicParsing="false" onAction="#onClickButtonRefresh" prefHeight="25.0" prefWidth="59.0" text="Refresh" />
+         </children>
+      </Pane>
+   </children>
+</VBox>

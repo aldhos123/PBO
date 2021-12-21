@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="412.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="id.ac.upj.tif.pbouas.Login">
+   <children>
+      <BorderPane prefHeight="84.0" prefWidth="710.0" style="-fx-background-color: #87dfe9;">
+         <left>
+            <Label prefHeight="53.0" prefWidth="253.0" text=" Sign-In" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Yu Gothic Medium" size="45.0" />
+               </font>
+            </Label>
+         </left>
+         <right>
+            <ImageView fitHeight="92.0" fitWidth="168.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../../../../../../java/id/ac/upj/tif/pbouas/images/akun.png" />
+               </image>
+            </ImageView>
+         </right>
+      </BorderPane>
+      <Label layoutX="37.0" layoutY="121.0" text="Username">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="165.0" text="Password">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="username_text" layoutX="117.0" layoutY="119.0" prefHeight="25.0" prefWidth="204.0" />
+      <PasswordField fx:id="password_text" layoutX="117.0" layoutY="163.0" prefHeight="25.0" prefWidth="204.0" />
+      <Button fx:id="btnLogin" layoutX="270.0" layoutY="206.0" mnemonicParsing="false" onAction="#onClickButtonMasuk" text="Masuk" />
+      <Label fx:id="wrongLogin" layoutX="37.0" layoutY="179.0" />
+   </children>
+</AnchorPane>
